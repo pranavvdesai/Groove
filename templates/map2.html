@@ -1,0 +1,25 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-10">
+      <div id="map2"></div>
+    </div>
+    <div class="col-md-2">
+      <a class="btn btn-primary" href="{{ url_for('home') }}">end ride</a>
+      <div class="card">
+        <p>
+          <h3>You are pooled with</h3>
+          <br />
+          <h4 style="font-weight: 600;color:beige;">{{ss}}</h4>
+          <br />
+          <h3>Contact Your Poolmate</h3>
+          <br />
+          <h4 style="font-weight: 600;color:beige;">{{phn}}</h4>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

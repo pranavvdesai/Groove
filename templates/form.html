@@ -1,0 +1,128 @@
+{% extends "layout.html" %} {% block content %}
+<div class="body-main">
+  <div class="container" id="bgimage">
+    <main class="mb-5">
+      <form action="/home" id="survey-form" method="POST">
+        <p id="description text-white" style="color: white">
+          Help us by answering some questions so that we pool you with like
+          minded people :
+        </p>
+        <div class="form-group">
+          <label for="movie" class="fq"
+            >What's your favorite movie genre: (Check all that you like)</label
+          >
+          <label for="movie" class="fq">
+            <input type="radio" name="movie" id="" value="a" />Romance
+          </label>
+          <label for="movie" class="fq">
+            <input type="radio" name="movie" id="" value="b" />Thrillers
+          </label>
+          <label for="movie" class="fq">
+            <input type="radio" name="movie" id="" value="c" />Classics
+          </label>
+          <label for="movie" class="fq">
+            <input type="radio" name="movie" id="" value="d" />Comedy
+          </label>
+          <label for="movie" class="fq">
+            <input type="radio" name="movie" id="" value="d" />Science Fiction
+          </label>
+          <label for="movie" class="fq">
+            <input type="radio" name="movie" id="" value="e" />Fantasy
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="music" class="fq"
+            >What music do you frequently listen to: (Check all that you
+            like)</label
+          >
+          <label for="music" class="fq">
+            <input type="radio" name="music" id="" value="a" />Country
+          </label>
+          <label for="music" class="fq">
+            <input type="radio" name="music" id="" value="b" />Pop(current
+            artists)
+          </label>
+          <label for="music" class="fq">
+            <input type="radio" name="music" id="" value="c" />Hip Hop
+          </label>
+          <label for="music" class="fq">
+            <input type="radio" name="music" id="" value="d" />Rock and metal
+          </label>
+          <label for="music" class="fq">
+            <input type="radio" name="music" id="" value="e" />Electronic music
+          </label>
+          <label for="music" class="fq">
+            <input type="radio" name="music" id="" value="f" />Jazz, Folk or
+            Classical
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="sport" class="fq">What's your favorite sport:</label>
+          <label for="sport" class="fq">
+            <input type="radio" name="sport" id="" value="a" />Football
+          </label>
+          <label for="sport" class="fq">
+            <input type="radio" name="sport" id="" value="b" />NLF
+          </label>
+          <label for="sport" class="fq">
+            <input type="radio" name="sport" id="" value="c" />Hip Hop
+          </label>
+          <label for="sport" class="fq">
+            <input type="radio" name="" id="" value="d" />Basketball
+          </label>
+          <label for="sport" class="fq">
+            <input type="radio" name="sport" id="" value="e" />Tennis
+          </label>
+          <label for="sport" class="fq">
+            <input type="radio" name="sport" id="" value="f" />Cricket
+          </label>
+          <label for="sport" class="fq">
+            <input type="radio" name="sport" id="" value="g" />None of the above
+          </label>
+        </div>
+        <div class="form-group radio-group">
+          <label for="" class="fq"
+            >Which of the following describes you the best: (Select the best
+            one)</label
+          >
+          <label for="" class="fq">
+            <input type="radio" name="choice" value="a" />Supressed emotions,
+            hides pain, calm af, impressive sometimes.
+          </label>
+          <label for="" class="fq">
+            <input type="radio" name="choice" value="b" />Funny and childish,
+            well tempered, cool af.
+          </label>
+          <label for="" class="fq">
+            <input type="radio" name="choice" value="c" />Short-tempered,
+            determained, never give up attitude.
+          </label>
+          <label for="" class="fq">
+            <input type="radio" name="choice" value="d" />Calm, introvert,
+            analyses surroundingd before speaking.
+          </label>
+        </div>
+        <div class="form-group btn btn1">
+          <div class="inner"></div>
+          <button type="submit" id="submit">Submit</button>
+        </div>
+        <div>
+          <ul class="box-area">
+            <li class="fas fa-star"></li>
+            <li></li>
+            <li class="fas fa-star"></li>
+            <li></li>
+            <li class="fas fa-star"></li>
+            <li></li>
+            <li class="far fa-snowflake"></li>
+            <li></li>
+            <li class="far fa-snowflake"></li>
+            <li></li>
+          </ul>
+        </div>
+      </form>
+    </main>
+  </div>
+</div>
+
+{% endblock content %}
