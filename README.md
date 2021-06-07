@@ -69,7 +69,9 @@ Moderators would be provided with extra benefits and rewards.
 4) Chat Service: We would like to add a chat service in the app through which pool members can coordinate rather than having to disclose their mobile numbers in the initial stage.
 
 
+# Instructions
 
+- See requirements.txt
 
 
 
