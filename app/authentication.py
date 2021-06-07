@@ -85,8 +85,6 @@ def logout():
     session.pop('user_id')
     return redirect('/')
 
-
-
 @app.route('/form')
 def form():
     return render_template('form.html')
@@ -107,8 +105,6 @@ def form_data():
         conn.commit()
         conn.commit()
         return render_template('home.html')
-
-
 
 @app.route('/',methods=['GET', 'POST'])
 def index():

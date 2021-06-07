@@ -11,8 +11,8 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
 from nltk.stem import WordNetLemmatizer
 
-classifier=pickle.load(open('/home/abhash/Desktop/carpooling/hack_model/svc_clf2.pkl','rb'))
-vectorizer=pickle.load(open('/home/abhash/Desktop/carpooling/hack_model/vec2.pkl','rb'))
+classifier=pickle.load(open('../hack_model/svc_clf2.pkl','rb'))
+vectorizer=pickle.load(open('../hack_model/vec2.pkl','rb'))
 
 def predict(tweet):
     # Takes input tweet , does all the preprocessing and gives prediction
