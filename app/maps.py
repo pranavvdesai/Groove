@@ -1,13 +1,11 @@
 from flask import Flask,render_template,request,redirect
-import mysql.connector
 from app import matching
 from app import app
+from app import cursor
+from app import conn
+from app.authentication import email
 import math
 
-conn=mysql.connector.connect(host="remotemysql.com",user="9YwiYaINDg",password="WB2u9rVHb5",database="9YwiYaINDg")
-cursor=conn.cursor()
-
-email=request.form.get('useremail')
 
 @app.route('/map1')
 def map1():    

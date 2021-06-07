@@ -1,15 +1,13 @@
 from flask import Flask,render_template,request,redirect,session,flash,redirect,url_for
-import mysql.connector
 from passlib.hash import sha256_crypt
 from werkzeug.utils import secure_filename
 from app import app
 import tweepy
 from app import api
 from app import ml
+from app import cursor
+from app import conn
 import math
-
-conn=mysql.connector.connect(host="remotemysql.com",user="9YwiYaINDg",password="WB2u9rVHb5",database="9YwiYaINDg")
-cursor=conn.cursor()
 
 @app.route('/home')
 def home():
