@@ -1,5 +1,8 @@
+import math
 
 # a1 = start of user a, a2 is end, b1 start of user b, b2 end of user b
+
+
 def directionCheck(a1, a2, b1, b2):
 
     check = False

@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
+# Calls the Twitter API and returns a list of tweets
+
 
 def twitter_api(twitter_id):
     consumer_key = os.getenv("CONSUMER_KEY")

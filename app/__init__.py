@@ -10,7 +10,14 @@ conn=mysql.connector.connect(host="remotemysql.com",user=os.getenv("DB_USER"),pa
 cursor=conn.cursor()
 
 from app import api
-from app import authentication
-from app import maps
+from app.users.auth_routes import users
+from app.main.routes import main
+from app.maps.map_routes import maps
+
+app.register_blueprint(users)
+app.register_blueprint(main)
+app.register_blueprint(maps)
+
 from app import matching
 from app import ml
+

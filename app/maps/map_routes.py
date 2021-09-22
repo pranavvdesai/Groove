@@ -1,18 +1,22 @@
-from flask import Flask, render_template, request, redirect
+from flask import Blueprint, render_template, request
 from app import matching
-from app import app
 from app import cursor
 from app import conn
-from app.authentication import email
-import math
+from app.users.auth_routes import email
+
+maps = Blueprint('maps', __name__)
+
+# Map Routes
 
 
-@app.route('/map1')
+@maps.route('/map1')
 def map1():
     return render_template('map1.html')
 
+# Gets the corrdinates of the user's location , matches users and updates the DB
 
-@app.route('/map2', methods=['GET', 'POST'])
+
+@maps.route('/map2', methods=['GET', 'POST'])
 def map2():
     if request.method == "POST":
         req = request.form
@@ -38,13 +42,13 @@ def map2():
     u2 = (user[1], user[8])
     d1 = {record[1]: record[7] for record in records}
     d2 = {record[1]: record[8] for record in records}
-    ss = matching.match(u2, d2)
-    print(ss)
+    # User's match based on compatibility types
+    max_user = matching.match(u2, d2)
     cursor.execute(
-        """SELECT * FROM `users`  WHERE `name` LIKE '{}' """.format(ss))
+        """SELECT * FROM `users`  WHERE `name` LIKE '{}' """.format(max_user))
     usr_phn = cursor.fetchone()
     phn = usr_phn[4]
     pooling = 0
     cursor.execute(
         """UPDATE `users` set pooling='{}' WHERE email='{}' """.format(pooling, email))
-    return render_template('map2.html', ss=ss, phn=phn)
+    return render_template('map2.html', user=max_user, phn=phn)
